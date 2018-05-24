@@ -59,6 +59,16 @@
           <h1>Data Processing Activity (DPA) Register</h1>
           <p>This table inspired by the <a href="https://ec.europa.eu/commission/sites/beta-political/files/data-protection-factsheet-business-7-steps_en.pdf">EC’s Factsheet</a></p>
 
+<address class="well">
+	<strong>Bioinformatics Group</strong><br />
+	<a href="mailto:contact@usegalaxy.eu">contact@usegalaxy.eu</a><br />
+	Department of Computer Science<br />
+	Albert-Ludwigs-University Freiburg<br />
+	Georges-Köhler-Allee 106<br />
+	79110 Freiburg<br />
+	Germany<br />
+</address>
+
 <table class="table table-striped table-responsive">
 	<thead>
 		<tr>
@@ -119,10 +129,20 @@
 	<tbody>
 		
 		<tr>
-			<td>Contact details of UseGalaxy.eu users</td>
-			<td>Customers</td>
+			<td>Email address of UseGalaxy.eu users</td>
+			<td>End users</td>
 			<td>Contacting end users in case of privacy breaches or changes to privacy policies</td>
-			<td>UseGalaxy.eu administrators</td>
+			<td>Administrators of the UseGalaxy.eu service</td>
+			<td>Until user requests deletion</td>
+			<td>Postgresql DB with highly restricted and audited access</td>
+			<td>false</td>
+		</tr>
+		
+		<tr>
+			<td>Chosen name provided by UseGalaxy.eu users</td>
+			<td>End users</td>
+			<td>Referring to users per their preference in the user interface. Additionally used to refer to user when they choose to share their workflows or data publicly.</td>
+			<td>Administrators of the UseGalaxy.eu service, made public only when the user requests to publish a history/workflow/etc publicly.</td>
 			<td>Until user requests deletion</td>
 			<td>Postgresql DB with highly restricted and audited access</td>
 			<td>false</td>
