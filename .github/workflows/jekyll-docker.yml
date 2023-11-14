@@ -13,23 +13,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Create tmpdir
-      run: TMP_DIR=$(mktemp -d)
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v $TMP_DIR/_site:/srv/jekyll/tmp \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future -d /srv/jekyll/tmp"
-    - uses: actions/checkout@v4
+    - name: Jekyll Builder for GitHub Pages
+      uses: fabacab/jekyll-builder-for-github-pages-action@v1
       with:
-        ref: 'gh-pages'
-    - name: Delete all old files
-      run: rm -rf ${{ github.workspace }}/*
-    - name: Add from TMP_DIR
-      run: cp -Rv $TMP_DIR/. ${{ github.workspace }}
-    - uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: Update site ${{github.run_id}}
-        branch: gh-pages
-        commit_user_name: "github-actions[bot]"
-        commit_user_email: "contact@usegalaxy.eu"
+        gh_pages_publishing_source: gh-pages
+        git_commit_message: Update Sites from run ${{github.run_id}}
+        git_committer_email: 'contact@usegalaxy.eu'
+        git_commiter_name: 'GH Actions Bot'
