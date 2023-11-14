@@ -17,6 +17,3 @@ jobs:
       uses: fabacab/jekyll-builder-for-github-pages-action@v1
       with:
         gh_pages_publishing_source: gh-pages
-        git_commit_message: Update Sites from run ${{github.run_id}}
-        git_committer_email: 'contact@usegalaxy.eu'
-        git_committer_name: 'GH Actions Bot'
