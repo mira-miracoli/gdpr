@@ -19,4 +19,4 @@ jobs:
         gh_pages_publishing_source: gh-pages
         git_commit_message: Update Sites from run ${{github.run_id}}
         git_committer_email: 'contact@usegalaxy.eu'
-        git_commiter_name: 'GH Actions Bot'
+        git_committer_name: 'GH Actions Bot'
